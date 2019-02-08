@@ -1,0 +1,13 @@
+<html>
+<body>
+<input type="file" accept="image/*" onchange="loadFile(event)" >
+<br>
+<img id="output" style="width:20%; margin-top:10px;"  src="" alt="image"/>
+</body>
+</html>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
